@@ -1,0 +1,28 @@
+:root {
+    --dark-color: rgb(38, 88, 50);
+    --medium-color: rgb(75, 170, 103);
+    --light-color: rgb(167, 236, 161);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1,7;
+    color: #fff;
+    padding: 2rem;
+}
+
+.header {
+    height: 95vh;
+    background-image: url('../img/nature.jpg');
+    background-size: cover;
+    background-size: top;
+    clip-path: polygon(0 0, 100% 0%, 100% 69%, 0% 100%);
+}
