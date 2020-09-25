@@ -1,6 +1,6 @@
 :root {
-    --dark-color: rgb(38, 88, 50);
-    --medium-color: rgb(75, 170, 103);
+    --dark-color: rgb(38, 88, 50, 0.753);
+    --medium-color: rgb(125, 255, 164, 0.2);
     --light-color: rgb(167, 236, 161);
 
 }
@@ -21,8 +21,101 @@ body {
 
 .header {
     height: 95vh;
-    background-image: url('../img/nature.jpg');
+    background-image: linear-gradient(to bottom right, var(--light-color), 
+    var(--medium-color)), url('../img/nature.jpg');
     background-size: cover;
     background-size: top;
     clip-path: polygon(0 0, 100% 0%, 100% 69%, 0% 100%);
 }
+
+.logo-box {
+    position: absolute;
+    top: 6%;
+    left: 3%;
+}
+
+.logo {
+    height: 1.7rem;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.5rem;
+    animation: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+    animation: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+.btn-div {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 1rem;
+    margin: 2rem;
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+
+    transition-property: transform;
+    transition-duration: 3s; 
+}
+
